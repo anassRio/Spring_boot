@@ -7,6 +7,7 @@ Spring boot
     @RequestMappin : define mapping to rest controller ( path = "api/v1/..." )
     @GetMapping : define a GET EndPoint
     @PostMapping : define a POST Endpoint
+    @RequestBody : 
 
 
 #Service @nnotations :
@@ -33,4 +34,4 @@ Spring boot
     @Id : Specifies the primary key of an entity.
     @SequenceGenerator : Generate a sequence for the primary keys of the Entity
     @GeneratedValue : Provides for the specification of generation strategies for the values of primary keys
-
+    @Transient : Specifies that the property or field is not persistent

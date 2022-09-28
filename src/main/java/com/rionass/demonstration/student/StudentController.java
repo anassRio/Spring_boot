@@ -1,9 +1,7 @@
 package com.rionass.demonstration.student;
 
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,7 +19,13 @@ public class StudentController {
 
     // Specify Endpoint Get
     @GetMapping
-    public ResponseEntity<List<Student>> getStudent() {
-        return ResponseEntity.ok(studentService.getStudent());
+    public List<Student> getStudent() {
+        return studentService.getStudent();
+    }
+
+    //Specify EndPoint Post
+    @PostMapping
+    public void registerNewStudent(@RequestBody Student student){
+        studentService.addNewStudent(student);
     }
 }
