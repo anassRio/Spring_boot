@@ -1,5 +1,5 @@
 Spring boot
-
+https://www.youtube.com/watch?v=9SGDpanrc8U
 
 
 #API @nnotations : 
@@ -7,6 +7,10 @@ Spring boot
     @RequestMappin : define mapping to rest controller ( path = "api/v1/..." )
     @GetMapping : define a GET EndPoint
     @PostMapping : define a POST Endpoint
+    @RequestBody : param passed on Body to postRequest
+    @DeleteMapping(path = "{var}") : define a Delete Endpoint, var : variable passed in the path.
+    @PathVariable : refere to the variable passed on the path.
+    @PutMapping : update a resource on system.
 
 
 #Service @nnotations :
@@ -26,3 +30,12 @@ Spring boot
     @Equals : @HashCode(of = {« nom », « prenom »}) ou @HashCode(exclude = {« age »})
     @HashCode : @Equals(of = {« nom », « prenom »}) ou @Equals(exclude = {« age »})
 
+#JPA
+
+    @Entity : Specifies that the class is an entity.
+    @Table : Specifies the primary table for the annotated entity.
+    @Id : Specifies the primary key of an entity.
+    @SequenceGenerator : Generate a sequence for the primary keys of the Entity
+    @GeneratedValue : Provides for the specification of generation strategies for the values of primary keys
+    @Transient : Specifies that the property or field is not persistent
+    @Transactional : Manage state of the Entity covred by spring JPA
