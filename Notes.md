@@ -26,3 +26,11 @@ Spring boot
     @Equals : @HashCode(of = {« nom », « prenom »}) ou @HashCode(exclude = {« age »})
     @HashCode : @Equals(of = {« nom », « prenom »}) ou @Equals(exclude = {« age »})
 
+#JPA
+
+    @Entity : Specifies that the class is an entity.
+    @Table : Specifies the primary table for the annotated entity.
+    @Id : Specifies the primary key of an entity.
+    @SequenceGenerator : Generate a sequence for the primary keys of the Entity
+    @GeneratedValue : Provides for the specification of generation strategies for the values of primary keys
+
