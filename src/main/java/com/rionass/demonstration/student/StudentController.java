@@ -1,5 +1,6 @@
 package com.rionass.demonstration.student;
 
+import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -9,13 +10,10 @@ import java.util.List;
 @RestController
 // get mapping to student controller
 @RequestMapping(path ="api/v1/student")
+@AllArgsConstructor
 public class StudentController {
 
     private final StudentService studentService;
-
-    public StudentController(StudentService studentService) {
-        this.studentService = studentService;
-    }
 
     // Specify Endpoint Get
     @GetMapping
