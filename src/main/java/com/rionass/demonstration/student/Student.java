@@ -8,13 +8,12 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.Period;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@ToString
-@Getter
-@Setter
+
 @Entity
 @Table
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class Student {
     @Id
     @SequenceGenerator(
@@ -37,7 +36,6 @@ public class Student {
         this.name = name;
         this.email = email;
         this.dob = dob;
-
     }
 
     public Integer getAge() {

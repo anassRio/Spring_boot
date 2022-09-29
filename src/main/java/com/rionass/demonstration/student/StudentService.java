@@ -1,23 +1,19 @@
 package com.rionass.demonstration.student;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.time.LocalDate;
-import java.time.Month;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class StudentService {
 
     private final StudentRepository studentRepository;
-
-    public StudentService(StudentRepository studentRepository) {
-        this.studentRepository = studentRepository;
-    }
 
     public List<Student> getStudent() {
         return studentRepository.findAll();
